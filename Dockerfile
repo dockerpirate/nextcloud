@@ -1,6 +1,5 @@
-ARG NEXT_MM
-ARG NEXT_PP
+ARG TAG_P
 
-FROM nextcloud:"$NEXT_MM"."$NEXT_PP"
+FROM nextcloud:${TAG_P}
 
 RUN apt-get update && apt-get install -y procps libreoffice smbclient && rm -rf /var/lib/apt/lists/*
