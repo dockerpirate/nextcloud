@@ -1,5 +1,5 @@
-ENV NEXT_M
-ENV NEXT_P
+ARG NEXT_M
+ARG NEXT_P
 
 FROM nextcloud:${NEXT_M}.${NEXT_P}
 
