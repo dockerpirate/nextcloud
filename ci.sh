@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAG_1="$NEXT_M"."$NEXT_P"
+TAG_1="${NEXT_M}"."${NEXT_P}"
 TAG_2="${TRAVIS_TAG:-latest}"
 
 if [ "$TRAVIS_PULL_REQUEST" = "true" ] || [ "$TRAVIS_BRANCH" != "master" ]; then
