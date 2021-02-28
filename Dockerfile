@@ -1,4 +1,4 @@
-ARG TAG_P
+ARG TAG_PP=21.0
 
 FROM nextcloud:${TAG_P}
 
