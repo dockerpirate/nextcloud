@@ -13,13 +13,14 @@ fi
 echo $DOCKER_PASSWORD | docker login -u dockerpirate --password-stdin &> /dev/null
 
 docker buildx build \
-     --build-arg TAG_P=21.0 \
+     --build-arg TAG_P=$TAG_1 \
      --progress plain \
     --platform=linux/amd64,linux/386 \
     -t $DOCKER_REPO:$TAG_1 \
     --push .
     
 docker buildx build \
+     --build-arg TAG_P=$TAG_1 \
      --progress plain \
     --platform=linux/amd64,linux/386 \
     -t $DOCKER_REPO:$TAG_2 \
