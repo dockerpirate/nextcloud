@@ -13,8 +13,8 @@ fi
 echo $DOCKER_PASSWORD | docker login -u dockerpirate --password-stdin &> /dev/null
 
 docker buildx build \
-     --build-arg NEXT_M \
-     --build-arg NEXT_P \
+     --build-arg $NEXT_M \
+     --build-arg $NEXT_P \
      --progress plain \
     --platform=linux/amd64,linux/386 \
     -t $DOCKER_REPO:$TAG_1 \
