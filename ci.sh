@@ -13,7 +13,8 @@ TAG_2="${TRAVIS_TAG:-latest}"
 echo $DOCKER_PASSWORD | docker login -u dockerpirate --password-stdin &> /dev/null
 
 docker buildx build \
-     --build-arg TAG_P=$TAG_1 \
+     --build-arg NEXT_M \
+     --build-arg NEXT_P \
      --progress plain \
     --platform=linux/amd64 \
     -t $DOCKER_REPO:$TAG_1 \
